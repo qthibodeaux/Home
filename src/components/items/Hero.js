@@ -13,6 +13,17 @@ function Hero() {
 }
 
 function HeroBig () {
+    const onButtonClick = () => {
+        fetch('QuintusResumeWL.pdf').then(response => {
+            response.blob().then(blob => {
+                const fileURL = window.URL.createObjectURL(blob)
+                let alink = document.createElement('a')
+                alink.href = fileURL
+                alink.download = 'QuintusResumeWL.pdf'
+                alink.click()
+            })
+        })
+    }
     return (
         <Box
             fill='horizontal'
@@ -66,7 +77,7 @@ function HeroBig () {
                                     <Anchor color='dark-1' icon={<Github/>} href='https://github.com/qthibodeaux' target='_blank'/>
                                 </Tip>
                                 <Tip content='Click to download my resume.'>
-                                    <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusResumeMTO.docx.pdf' download/>
+                                    <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusResumeMTO.docx.pdf' onClick={onButtonClick} download/>
                                 </Tip>
                             </Box>
                         </Box> 
@@ -77,6 +88,17 @@ function HeroBig () {
 }
 
 function HeroSmall () {
+    const onButtonClick = () => {
+        fetch('QuintusResumeWL.pdf').then(response => {
+            response.blob().then(blob => {
+                const fileURL = window.URL.createObjectURL(blob)
+                let alink = document.createElement('a')
+                alink.href = fileURL
+                alink.download = 'QuintusResumeWL.pdf'
+                alink.click()
+            })
+        })
+    }
     return (
         <Box
             height='small'
@@ -116,7 +138,7 @@ function HeroSmall () {
                 >
                     <Anchor color='dark-1' icon={<Linkedin/>} href='https://www.linkedin.com/in/quintus-thibodeaux-4372751b0/' target='_blank'/>
                     <Anchor color='dark-1' icon={<Github/>} href='https://github.com/qthibodeaux' target='_blank'/>
-                    <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusThibodeauxResume92020.pdf' download/>
+                    <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusResumeMTO.docx.pdf' onClick={onButtonClick} download/>
                 </Box>
             </Box>
         </Box>
