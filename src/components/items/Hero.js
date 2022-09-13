@@ -1,0 +1,126 @@
+import { useContext } from 'react'
+import { Anchor, Box, Paragraph, Heading, ResponsiveContext, Tip } from 'grommet'
+import { DocumentDownload, Linkedin, Github } from 'grommet-icons'
+import MeLarge from '../../assets/MeWide.jpg'
+
+function Hero() {
+    const size = useContext(ResponsiveContext)
+  return (
+    <Box>
+        {size !== 'small' ? <HeroBig /> : <HeroSmall />}
+    </Box>
+  )
+}
+
+function HeroBig () {
+    return (
+        <Box
+            fill='horizontal'
+            width='xlarge'
+            height="small" 
+            background={{
+                image: `url(${MeLarge})`
+            }}
+        >
+            <Box
+                direction='column'
+                
+            >
+                <Box 
+                        height="small" 
+                        fill='horizontal'
+                    >
+                        <Box
+                            fill
+                            background={{
+                                color: 'accent-1',
+                                opacity: 'strong'
+                            }}
+                            pad='medium'
+                        >
+                            <Heading 
+                                responsive={true} 
+                                size="medium"
+                                margin="none"
+                                alignSelf="center"
+                            >
+                                Quintus Thibodeaux
+                            </Heading>
+                            <Paragraph 
+                                responsive={true} 
+                                size="large"
+                                textAlign="center"
+                                margin="none"
+                                alignSelf="center"
+                            >
+                                Full Stack Developer
+                            </Paragraph>
+                            <Box
+                                direction="row"
+                                alignSelf="center"
+                            >
+                                <Tip content='Link to my Linkedin page.'>
+                                    <Anchor color='dark-1' icon={<Linkedin/>} href='https://www.linkedin.com/in/quintus-thibodeaux-4372751b0/' target='_blank'/>
+                                </Tip>
+                                <Tip content='Link to my Github Page.'>
+                                    <Anchor color='dark-1' icon={<Github/>} href='https://github.com/qthibodeaux' target='_blank'/>
+                                </Tip>
+                                <Tip content='Click to download my resume.'>
+                                    <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusResumeMTO.docx.pdf' download/>
+                                </Tip>
+                            </Box>
+                        </Box> 
+                    </Box>
+            </Box>
+        </Box>
+    )
+}
+
+function HeroSmall () {
+    return (
+        <Box
+            height='small'
+            background={{
+                image: `url(${MeLarge})`
+            }}
+        >
+            <Box
+                height='small'
+                background={{
+                    color: 'accent-1',
+                    opacity: 'strong'
+                }}
+                pad='medium'
+            >
+                <Heading 
+                    responsive={true} 
+                    size="medium"
+                    margin="none"
+                    alignSelf="center"
+                    textAlign='center'
+                >
+                    Quintus Thibodeaux
+                </Heading>
+                <Paragraph 
+                    responsive={true} 
+                    size="large"
+                    textAlign="center"
+                    margin="none"
+                    alignSelf="center"
+                >
+                    Full Stack Developer
+                </Paragraph>
+                <Box
+                    direction="row"
+                    alignSelf="center"
+                >
+                    <Anchor color='dark-1' icon={<Linkedin/>} href='https://www.linkedin.com/in/quintus-thibodeaux-4372751b0/' target='_blank'/>
+                    <Anchor color='dark-1' icon={<Github/>} href='https://github.com/qthibodeaux' target='_blank'/>
+                    <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusThibodeauxResume92020.pdf' download/>
+                </Box>
+            </Box>
+        </Box>
+    )
+}
+
+export default Hero
