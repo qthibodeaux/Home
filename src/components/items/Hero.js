@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Anchor, Box, Paragraph, Heading, ResponsiveContext, Tip } from 'grommet'
+import { Anchor, Box, Paragraph, Heading, ResponsiveContext, Text, Tip } from 'grommet'
 import { DocumentDownload, Linkedin, Github } from 'grommet-icons'
 import MeLarge from '../../assets/MeWide.jpg'
 
@@ -70,13 +70,31 @@ function HeroBig () {
                                 direction="row"
                                 alignSelf="center"
                             >
-                                <Tip content='Link to my Linkedin page.'>
+                                <Tip content=
+                                    {
+                                        <Box background='dark-1' pad='small'>
+                                            <Text color='accent-1'>Link to my Linkedin page.</Text>
+                                        </Box>
+                                    }
+                                >
                                     <Anchor color='dark-1' icon={<Linkedin/>} href='https://www.linkedin.com/in/quintus-thibodeaux-4372751b0/' target='_blank'/>
                                 </Tip>
-                                <Tip content='Link to my Github Page.'>
+                                <Tip content=
+                                    {
+                                        <Box background='dark-1' pad='small'>
+                                            <Text color='accent-1'>Link to my Github Page.</Text>
+                                        </Box>
+                                    }
+                                >
                                     <Anchor color='dark-1' icon={<Github/>} href='https://github.com/qthibodeaux' target='_blank'/>
                                 </Tip>
-                                <Tip content='Click to download my resume.'>
+                                <Tip content=
+                                    {
+                                        <Box background='dark-1' pad='small'>
+                                            <Text color='accent-1'>Click to download my resume.</Text>
+                                        </Box>
+                                    }
+                                >
                                     <Anchor color='dark-1' icon={<DocumentDownload/>} href='myapp\public\QuintusResumeMTO.docx.pdf' onClick={onButtonClick} download/>
                                 </Tip>
                             </Box>

@@ -39,7 +39,7 @@ function BigProjects() {
 
 function ProjectItem (props) {
     const { id } = props
-    const { headline, caption, name } = props.projects
+    const { headline, caption, name, technologies, caption2, caption3 } = props.projects
     return (
         <Box 
             direction='row'
@@ -59,17 +59,21 @@ function ProjectItem (props) {
 
             <Box width='large' justify='between'>
                 <Box>
-                    <Text size='large' weight='bold' margin={{ bottom: 'small'}}>{name}</Text>
-                    <Text>{headline}</Text>
+                    <Text size='large' weight='bold'>{name}</Text>
+                    <Text margin={{ bottom: 'small'}}>{headline}</Text>
                 </Box>
                 <Box
                     fill='vertical'
                     pad={{top:'small'}}
                     overflow='auto'
+                    justify='between'
                 >
-                    <Text>{caption}</Text>
-                    Features
-                    React
+                    <Box>
+                        <Text size='small'>{caption}</Text>
+                        <Text size='small' margin={{ top: 'small'}}>{caption2}</Text>
+                        <Text size='small' margin={{ top: 'small'}}>{caption3}</Text>
+                    </Box>
+                    <Text size='xsmall'>Technologies | {technologies}</Text>
                 </Box>
                 <Box
                     direction='row'
@@ -83,4 +87,5 @@ function ProjectItem (props) {
     )
 }
 
+const caption2 = "Grommet, ReactHookForm, ReduxToolkit, ReactRouterDom, MongoDB"
 export default BigProjects
