@@ -5,11 +5,13 @@ import { blogVal } from '../../atoms'
 import { useRecoilState } from 'recoil'
 import { blags } from '../../bank'
 
+import Cssvari from '../../assets/cssvari.jpg'
 import Besomeone from '../../assets/besomeonecrop.jpg'
 import Organization from '../../assets/organization.jpg'
 import Restart from '../../assets/projectrestart.png'
+import Sass from '../../assets/sass2.jpg'
 
-const items = [Besomeone, Organization, Restart]
+const items = [Sass, Cssvari, Besomeone, Organization, Restart]
 
 function SmallProjects() {
     const [val, setVal] = useRecoilState(blogVal)

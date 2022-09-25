@@ -1,11 +1,13 @@
 import { Box, Image } from 'grommet'
 import { blags } from '../../bank'
 
+import Cssvari from '../../assets/cssvari.jpg'
 import Besomeone from '../../assets/besomeonecrop.jpg'
 import Organization from '../../assets/organization.jpg'
 import Restart from '../../assets/projectrestart.png'
+import Sass from '../../assets/sass2.jpg'
 
-const images = [Besomeone, Organization, Restart]
+const images = [Sass, Cssvari, Besomeone, Organization, Restart]
 
 function BlogList () {    
     return (

@@ -2,30 +2,18 @@ const projects = [
     {
         "name": "SocialMediaApp",
         "shortName": "SocialMediaApp",
-        "headline": "React + MongoDB Full Stack Web Application",
+        "headline": "React + MongoDB Full Stack Web App",
         "caption": "Web App mimicking popular social media sites. Login/Logout functionality. Ability to friend and unfriend other users. Ability to share post and images.",
         "caption2": "Client side features: Form verification, login authentication, JWT access & refresh token, cookies, Redux Toolkit api.",
         "caption3": "Server side features: MongoDB schema and models, CORS Site filter options, JWT access & refresh tokens, cookies, MVC structure,  CRUD API operations.",
         "technologies":"Grommet, ReactHookForm, ReduxToolkit, ReactRouterDom, MongoDB",
-        "hasGithub": true,
         "githubrepo": "https://github.com/qthibodeaux/SocialMediaApp",
-        "hassite": "hidden",
+        "hassite": true,
         "site": "https://qthibodeaux.github.io/SocialMediaApp/",
         "gif": "src/assets/sma.gif",
-    },
-    {
-        "name": "AppToSMS",
-        "shortName": "AppToSMS",
-        "headline": "React + MaterialUI Full Stack Web Application",
-        "caption": "Webpage dedicated to setting reminders, and sending notifications for scheduled events to a custom destination. Extensive form allows user to input phone number to send a custom message message.",
-        "caption2": "Client side features: Form verification, login authentication, JWT access & refresh token, cookies, Redux Toolkit api.",
-        "caption3": "Server side features: MongoDB schema and models, Twilio SMS API, CORS Site filter options, JWT access & refresh tokens, cookies, MVC structure,  CRUD API operations.",
-        "technologies":"MaterialUI, ReactHookForm, YupResolver, ReduxToolkit, ReactRouterDom, MongoDB, Twilio",
-        "hasGithub": true,
-        "githubrepo": "https://github.com/qthibodeaux/AppToSMS",
-        "hassite": "hidden",
-        "site": "",
-        "gif": "src/assets/apptosms.gif",
+        "mobile": false,
+        "backend": true,
+        "backendsite": 'https://github.com/qthibodeaux/SMAppBackend'
     },
     {
         "name": "JTPrivateCare",
@@ -34,11 +22,29 @@ const projects = [
         "caption": "Modern design for private assisted living care facility. Website to be used for information, discoverability, and online presence. Worked closely with JTPrivateCare to decide on styling, media, page content, and creation.",
         "caption2": "EmailJS used to send form data.",
         "technologies": "Grommet, Emailjs",
-        "hasGithub": true,
         "githubrepo": "https://github.com/qthibodeaux/asl",
-        "hassite": "hidden",
+        "hassite": true,
         "site": "https://www.jtprivatecare.com/",
         "gif": "jtpc.gif",
+        "mobile": true,
+        "backend": false,
+        "backendsite": ""
+    },
+    {
+        "name": "AppToSMS",
+        "shortName": "AppToSMS",
+        "headline": "React + MaterialUI Full Stack Web App",
+        "caption": "Webpage dedicated to setting reminders, and sending notifications for scheduled events to a custom destination. Extensive form allows user to input phone number to send a custom message message.",
+        "caption2": "Client side features: Form verification, login authentication, JWT access & refresh token, cookies, Redux Toolkit api.",
+        "caption3": "Server side features: Postgres schema and models, Twilio SMS API, CORS Site filter options, JWT access & refresh tokens, cookies, MVC structure,  CRUD API operations.",
+        "technologies":"MaterialUI, ReactHookForm, YupResolver, ReduxToolkit, ReactRouterDom, Express, Postgres, Twilio, Knex, SendGrid",
+        "githubrepo": "https://github.com/qthibodeaux/AppToSMS",
+        "hassite": true,
+        "site": "https://qthibodeaux.github.io/AppToSMS/#/login",
+        "gif": "src/assets/apptosms.gif",
+        "mobile": true,
+        "backend": true,
+        "backendsite": "https://github.com/qthibodeaux/AppToSMSBackend"
     },
     {
         "name": "Fullstack Authentication",
@@ -48,49 +54,54 @@ const projects = [
         "caption2": "Client side features: Custom React Hooks to manage authorization for protected URL. Allows for user to register for site, login/logout functionality. Allows for updating of user name/email/password.",
         "caption3":"Server side features: Express, Postgres, and Sequelize are utilized in the backend.",
         "technologies":"Bootstrap, ReactHookForm, ReactRouterDom, YupResolver, Axios, Express, Postgres, Sequelize",
-        "hasGithub": true,
         "githubrepo": "https://github.com/qthibodeaux/FullStackAuthentication",
-        "hassite": "hidden",
+        "hassite": false,
         "site": "https://qthibodeaux.github.io/FullStackAuthentication/",
         "gif": "src/assets/fullauth.gif",
-        "tags": {"html5/css": true, "bootstrap":true, "react":true, "redux":true }
+        "mobile": true,
+        "backend": true,
+        "backendsite": "https://github.com/qthibodeaux/FSBackend"
     },
     {
         "name": "Mary's BBQ",
         "shortName": "Mary's BBQ",
-        "headline": "React + MaterialUI Frontend Web Application",
+        "headline": "React + MaterialUI Frontend Web App",
         "caption": "Webpage for a mock restaurant, has a menu, cart, and allows for order. Redux is used for state management.",
         "technologies":"MaterialUI, ReduxToolkit, ReactHookForm, ReactRouterDom, YupResolver",
-        "hasGithub": true,
         "githubrepo": "https://github.com/qthibodeaux/marysbbq",
         "hassite": "hidden",
         "site": "",
         "gif": "marys.png",
-        "tags": {"html5/css": true, "react":true, "expressjs":false, "postgres":false, "axios": false},
+        "backend": false,
+        "backendsite": ""
     },
     {
         "name": "Project Sidelined",
         "shortName": "Project Sidelined",
-        "headline": "Frontend Interactive Cardgame",
+        "headline": "React + Bootstrap Entertainment Spp",
         "caption": "Frontend creative entertainment application. Uses popular tv series as a basis for a card game. Uses React and Recoil for advanced  state management. Uses extensive javascript programming to management and manipulate data for card game interaction.",
-        "hasGithub": true,
-        "githubrepo": "https://github.com/qthibodeaux/DCFirstGroupProject",
-        "hassite": "hidden",
+        "githubrepo": "https://github.com/qthibodeaux/Sidelined",
+        "hassite": false,
         "site": "",
         "gif": "sideline.gif",
-        "tags": {"html5/css" : true }
+        "technologies": "Bootstrap, ReactRedux, ReactRouterDom, Auth0",
+        "mobile": false,
+        "backend": false,
+        "backendsite": ""
     },
     {
         "name": "Piano Connection",
         "shortName": "Piano Connection",
-        "headline": "Frontend Website",
-        "caption": "React + Grommet powered front end website for private piano company. Website to be used for information, discoverability, and online presence. Worked closely with Piano Connection to decide on styling, media, page content, and creation. First project working with professional third party.",
-        "hasGithub": true,
-        "githubrepo": "https://github.com/qthibodeaux/DCFirstGroupProject",
-        "hassite": "hidden",
+        "headline": "React + Grommet Website",
+        "caption": "Single page website for private piano company. Website to be used for information, discoverability, and online presence. Worked closely with Piano Connection to decide on styling, media, page content, and creation. First project working with professional third party.",
+        "githubrepo": "https://github.com/qthibodeaux/PianoConnection",
+        "hassite": false,
         "site": "",
         "gif": "piano.gif",
-        "tags": {"html5/css" : true }
+        "technologies": "Grommet",
+        "mobile": true,
+        "backend": false,
+        "backendsite": ""
     },
 ]
 
@@ -124,19 +135,28 @@ const post = [
 const updates = [
     {date: "10 August 2022", content: "Complete Revamp Initiated"},
     {date: "17 August 2022 ", content: "Update: Added ReactFullStackSkeleton Project, updated Blog, and changed the updates tab."},
-    {date: "21 August 2022 ", content: "Update: Addded tabs to main component. Three tabs for Projects, Blog, and Site Update. Added React component for each tab."},
+    {date: "21 August 2022 ", content: "Update: Added tabs to main component. Three tabs for Projects, Blog, and Site Update. Added React component for each tab."},
+    {date: "24 September 2022 ", content: "Update: Fixed many lingering alignment and spacing annoyances I was having with the site. Updated images, added blog post, and other content updates."},
 ]
 
 const blags = [
     {
+        title: "SASS Variables",
+        subtitle: "",
+        post: "Learning a CSS pre-processsor lead me to fun discoveries in style sheets. Variables in Sass are very powerful and can help you create legible and easily replicable code. The differences between a Sass variable and CSS are small but have an important difference. Unlike Sass variables, custom properties do stay in the CSS code and they are defined using a special --variable-name syntax that browsers recognize. They should be defined on an HTML element to be in power, while Sass variables are replaced with their actual values at compile time.",
+        date: "September 7, 2022"
+    },
+    {
+        title: "CSS Custom Properties",
+        subtitle: "",
+        post: "Part of this section will be used to chronicle my understanding of variable programming topics. Basically an “As Far As I Know” section. During my journey in front end design, I enjoyed learning about the application of custom properties in CSS. A pretty standard technique that allows for easily replicable code to avoid the tedious processes of writing the same code. The process is simple enough. Following the declaration and usage can help eliminate the need to memorize a color hex code and have an easier to remember property name.",
+        date: "August 31, 2022"
+    },
+    {
         title: "Be Someone",
         image: "'../../../../assets/besomeonecrop.jpg'",
         subtitle: "",
-        post: [
-            "Excitement! Major site update. I decided to add a blog and update notes to my site. The purpose of my blog is to log my journey as a software developer and express my thoughts on my experience/journey. My personal site has undergone a few major revisions and will continue to do so. I have more ideas for what I want to do and will chronicle that here as I continue to develop in software development",
-            "Excitement! Major site update. I decided to add a blog and update notes to my site. The purpose of my blog is to log my journey as a software developer and express my thoughts on my experience/journey. My personal site has undergone a few major revisions and will continue to do so. I have more ideas for what I want to do and will chronicle that here as I continue to develop in software development.",
-            "Excitement! Major site update. I decided to add a blog and update notes to my site. The purpose of my blog is to log my journey as a software developer and express my thoughts on my experience/journey. My personal site has undergone a few major revisions and will continue to do so. I have more ideas for what I want to do and will chronicle that here as I continue to develop in software development."
-        ],
+        post: "Excitement! Major site update. I decided to add a blog and update notes to my site. The purpose of my blog is to log my journey as a software developer and express my thoughts on my experience/journey. My personal site has undergone a few major revisions and will continue to do so. I have more ideas for what I want to do and will chronicle that here as I continue to develop in software development",
         date: "August 24, 2022",
     },
     {

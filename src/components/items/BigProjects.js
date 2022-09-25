@@ -1,5 +1,5 @@
-import { Anchor, Box, Image, Text } from 'grommet'
-import { Domain, Github, PhoneVertical } from 'grommet-icons'
+import { Anchor, Box, Image, Text, Tip } from 'grommet'
+import { Database, Domain, Github, PhoneVertical } from 'grommet-icons'
 import { projects } from '../../bank'
 
 import Sm from '../../assets/sma.gif'
@@ -10,7 +10,7 @@ import Mb from '../../assets/marys.png'
 import Ps from '../../assets/sideline.gif'
 import Pg from '../../assets/piano.gif'
 
-const items = [Sm, Ap, Jt, Fa, Mb, Ps, Pg]
+const items = [Sm, Jt, Ap, Fa, Mb, Ps, Pg]
 
 function BigProjects() {
   return (
@@ -39,7 +39,7 @@ function BigProjects() {
 
 function ProjectItem (props) {
     const { id } = props
-    const { headline, caption, name, technologies, caption2, caption3 } = props.projects
+    const { headline, caption, name, technologies, caption2, caption3, mobile, hassite, githubrepo, site, backend, backendsite } = props.projects
     return (
         <Box 
             direction='row'
@@ -78,14 +78,100 @@ function ProjectItem (props) {
                 <Box
                     direction='row'
                 >
-                    <Anchor color='white' icon={<Github />}/>
-                    <Anchor color='white' icon={<PhoneVertical />}/>
-                    <Anchor color='white' icon={<Domain />}/>
+                    <Tip
+                        plain
+                        dropProps={{
+                            align: { bottom: 'top' }
+                        }}
+                        content={
+                            <Box background='light-1' round={{ size: 'medium' }} pad='small'>
+                                <Text>Github Repo</Text>
+                            </Box>
+                        }>
+                        <Anchor color='white' href={githubrepo} target="_blank" icon={<Github />}/>
+                    </Tip>
+                    {mobile 
+                        ? (
+                            <Tip
+                                plain
+                                dropProps={{
+                                    align: { bottom: 'top' }
+                                }}
+                                content={
+                                    <Box background='light-1' round={{ size: 'medium' }} pad='small'>
+                                        <Text>Mobile Friendly?</Text>
+                                    </Box>
+                                }   
+                            >
+                                <Anchor color='white' icon={<PhoneVertical />}/>
+                            </Tip>
+                        ) 
+                        : (
+                            <Tip
+                                plain
+                                dropProps={{
+                                    align: { bottom: 'top' }
+                                }}
+                                content={
+                                    <Box background='light-1' round={{ size: 'medium' }} pad='small'>
+                                        <Text>No mobile site</Text>
+                                    </Box>
+                                }   
+                            >
+                                <Anchor disabled color='white' icon={<PhoneVertical />}/>
+                            </Tip>
+                        )
+                    }
+                    {hassite
+                        ? (
+                            <Tip
+                                plain
+                                dropProps={{
+                                    align: { bottom: 'top' }
+                                }}
+                                content={
+                                    <Box background='light-1' round={{ size: 'medium' }} pad='small'>
+                                        <Text>Visit {name}</Text>
+                                    </Box>
+                                }   
+                            >
+                                <Anchor color='white' href={site} target="_blank" icon={<Domain />}/>
+                            </Tip>
+                        )
+                        : (
+                            <Tip
+                                plain
+                                dropProps={{
+                                    align: { bottom: 'top' }
+                                }}
+                                content={
+                                    <Box background='light-1' round={{ size: 'medium' }} pad='small'>
+                                        <Text>No Github Pages page</Text>
+                                    </Box>
+                                }   
+                            >
+                                <Anchor disabled color='white' icon={<Domain />}/>
+                            </Tip>
+                        )
+                    }
+                    {backend && (
+                            <Tip
+                                plain
+                                dropProps={{
+                                    align: { bottom: 'top' }
+                                }}
+                                content={
+                                    <Box background='light-1' round={{ size: 'medium' }} pad='small'>
+                                        <Text>Backend Link</Text>
+                                    </Box>
+                                }   
+                            >
+                                <Anchor color='white' href={backendsite} target="_blank" icon={<Database />}/>
+                            </Tip>
+                        )}
                 </Box>
             </Box>
         </Box>
     )
 }
-
-const caption2 = "Grommet, ReactHookForm, ReduxToolkit, ReactRouterDom, MongoDB"
 export default BigProjects

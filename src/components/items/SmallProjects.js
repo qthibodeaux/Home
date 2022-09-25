@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Box, Button, DropButton, Image, List, Text } from 'grommet'
-import { Domain, Selection, FormDown, FormUp, Github, PhoneVertical } from 'grommet-icons'
+import { Database, Selection, FormDown, FormUp, Github, PhoneVertical } from 'grommet-icons'
 import { projectVal } from '../../atoms'
 import { useRecoilState } from 'recoil'
 import { projects } from '../../bank'
@@ -13,7 +13,7 @@ import Mb from '../../assets/marys.png'
 import Ps from '../../assets/sideline.gif'
 import Pg from '../../assets/piano.gif'
 
-const items = [Sm, Ap, Jt, Fa, Mb, Ps, Pg]
+const items = [Sm, Jt, Ap, Fa, Mb, Ps, Pg]
 
 function SmallProjects() {
     const [val, setVal] = useRecoilState(projectVal)
@@ -82,6 +82,7 @@ function SmallProjects() {
 }
 
 function Flip (props) {
+    const { headline, caption, technologies, caption2, caption3, mobile, hassite, githubrepo, site, backend, backendsite } = props.projects
     return (
         <Box>
             <Box height='small'>
@@ -94,21 +95,25 @@ function Flip (props) {
                 height='xxsmall'
                 pad='medium'
             >
-                <Text color='black' weight='bold'>{props.projects.headline}</Text>
+                <Text color='black' weight='bold'>{headline}</Text>
             </Box>
-            <Box height='medium' pad='medium'>
-                    <Text color='black'>{props.projects.caption}</Text>
-                    <Text color='black'>Features</Text>
-                    <Text color='black' size='small'>React</Text>
+            <Box height='medium' pad='medium' justify='between'>
+                <Box gap='small'>
+                    <Text color='black'>{caption}</Text>
+                    <Text color='black'>{caption2}</Text>
+                    <Text color='black'>{caption3}</Text>
                 </Box>
+                <Text color='black' size='xsmall'>Techonologies | {technologies}</Text>
+            </Box>
             <Box
                 direction='row'
                 height='xxsmall'
                 background='accent-1'
+                justify='around'
             >
-                <Button icon={<Github />}/>
-                <Button icon={<PhoneVertical />}/>
-                <Button icon={<Domain />}/>
+                <Button href={githubrepo} target='_blank' icon={<Github color='dark-1' />} />
+                {mobile && hassite && <Button href={site} target='_blank' icon={<PhoneVertical color='dark-1'/>} />}
+                {backend && <Button href={backendsite} target='_blank' icon={<Database color='dark-1'/>} />}
             </Box>
         </Box>
     )

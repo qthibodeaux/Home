@@ -5,7 +5,7 @@ function Updates() {
   return (
     <Box
             justify='center'
-            align='start'
+            alignItems='center'
             fill='horizontal'
             pad='medium'
         >
