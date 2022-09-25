@@ -9,7 +9,7 @@ import Sm from '../../assets/sma.gif'
 import Ap from '../../assets/apptosms.gif'
 import Jt from '../../assets/jtpc.gif'
 import Fa from '../../assets/fullauth.gif'
-import Mb from '../../assets/marys.png'
+import Mb from '../../assets/bbq.jpg'
 import Ps from '../../assets/sideline.gif'
 import Pg from '../../assets/piano.gif'
 
