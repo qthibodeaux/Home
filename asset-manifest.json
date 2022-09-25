@@ -1,31 +1,33 @@
 {
   "files": {
     "main.css": "/Home/static/css/main.04f75095.css",
-    "main.js": "/Home/static/js/main.ed385676.js",
+    "main.js": "/Home/static/js/main.5217ec53.js",
     "static/media/apptosms.gif": "/Home/static/media/apptosms.e0522419f14cea9a81f5.gif",
     "static/media/sma.gif": "/Home/static/media/sma.cb51bf2315d3eb839c7e.gif",
     "static/media/jtpc.gif": "/Home/static/media/jtpc.3bb6a7b5d7f8aa411a95.gif",
     "static/media/MeWide.jpg": "/Home/static/media/MeWide.5728b876fb9a4eaa48ee.jpg",
+    "static/media/fullauth.gif": "/Home/static/media/fullauth.78eead082b8920392826.gif",
     "static/media/piano.gif": "/Home/static/media/piano.6d266c72e3dc116542ae.gif",
     "static/media/Metall.jpg": "/Home/static/media/Metall.850cfe711ed9e2667034.jpg",
-    "static/media/fullauth.gif": "/Home/static/media/fullauth.dba690b4e5cce9c4d3ed.gif",
-    "static/media/marys.png": "/Home/static/media/marys.6a877ab55c76f2880d30.png",
     "static/media/skycrop.jpg": "/Home/static/media/skycrop.99fd3c71b98f025962f8.jpg",
+    "static/media/bbq.jpg": "/Home/static/media/bbq.ab11d83b2000b5b3ebb4.jpg",
     "static/media/besomeonecrop.jpg": "/Home/static/media/besomeonecrop.68a5df324f8c1cf7a2be.jpg",
     "static/media/houcrop.jpg": "/Home/static/media/houcrop.7fdda94723fbe8304730.jpg",
     "static/media/blogtall.jpg": "/Home/static/media/blogtall.b0fc5ebf0a6eb6caca91.jpg",
     "static/media/sideline.gif": "/Home/static/media/sideline.c4c508a7aec508f7f7d6.gif",
     "static/media/screwcrop.jpg": "/Home/static/media/screwcrop.6c90cbcccf49777aca75.jpg",
     "static/media/organization.jpg": "/Home/static/media/organization.2b2de780b65c58ba9294.jpg",
+    "static/media/cssvari.jpg": "/Home/static/media/cssvari.120924620d231972ac14.jpg",
     "static/media/rebel.png": "/Home/static/media/rebel.24201752359b64b17884.png",
     "static/media/underconstruction.jpg": "/Home/static/media/underconstruction.ddb6df4ac4fe07cc15e9.jpg",
     "static/media/Projectstall.jpg": "/Home/static/media/Projectstall.14e4dda8b356364372b1.jpg",
+    "static/media/sass2.jpg": "/Home/static/media/sass2.2413f6d76b2a4cedb648.jpg",
     "index.html": "/Home/index.html",
     "main.04f75095.css.map": "/Home/static/css/main.04f75095.css.map",
-    "main.ed385676.js.map": "/Home/static/js/main.ed385676.js.map"
+    "main.5217ec53.js.map": "/Home/static/js/main.5217ec53.js.map"
   },
   "entrypoints": [
     "static/css/main.04f75095.css",
-    "static/js/main.ed385676.js"
+    "static/js/main.5217ec53.js"
   ]
 }
