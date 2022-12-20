@@ -1,5 +1,21 @@
 const projects = [    
     {
+        "name": "Photosite",
+        "shortName": "Photosite",
+        "headline": "Personalized React Photography Portfolio",
+        "caption": "Single page website for photographer. Website to be used for information, discoverability, and online presence. Worked closely with Photographer to decide on styling, media, page content, and creation.",
+        "caption2": "Client side features: Form verification, login authentication, JWT access & refresh token, cookies, Redux Toolkit api.",
+        "caption3": "Server side features: MongoDB schema and models, CORS Site filter options, JWT access & refresh tokens, cookies, MVC structure,  CRUD API operations.",
+        "technologies":"React",
+        "githubrepo": "https://github.com/qthibodeaux/PhotoSite",
+        "hassite": true,
+        "site": "https://qthibodeaux.github.io/PhotoSite/",
+        "gif": "src/assets/photog.gif",
+        "mobile": true,
+        "backend": false,
+        "backendsite": ''
+    },
+    {
         "name": "SocialMediaApp",
         "shortName": "SocialMediaApp",
         "headline": "React + MongoDB Full Stack Web App",
@@ -57,7 +73,7 @@ const projects = [
         "githubrepo": "https://github.com/qthibodeaux/FullStackAuthentication",
         "hassite": false,
         "site": "https://qthibodeaux.github.io/FullStackAuthentication/",
-        "gif": "src/assets/fullauth.gif",
+        "gif": "src/assets/fullaSuth.gif",
         "mobile": true,
         "backend": true,
         "backendsite": "https://github.com/qthibodeaux/FSBackend"
@@ -78,7 +94,7 @@ const projects = [
     {
         "name": "Project Sidelined",
         "shortName": "Project Sidelined",
-        "headline": "React + Bootstrap Entertainment Spp",
+        "headline": "React + Bootstrap Entertainment App",
         "caption": "Frontend creative entertainment application. Uses popular tv series as a basis for a card game. Uses React and Recoil for advanced  state management. Uses extensive javascript programming to management and manipulate data for card game interaction.",
         "githubrepo": "https://github.com/qthibodeaux/Sidelined",
         "hassite": false,

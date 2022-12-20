@@ -2,6 +2,7 @@ import { Anchor, Box, Image, Text, Tip } from 'grommet'
 import { Database, Domain, Github, PhoneVertical } from 'grommet-icons'
 import { projects } from '../../bank'
 
+import Ps1 from '../../assets/photog.gif'
 import Sm from '../../assets/sma.gif'
 import Ap from '../../assets/apptosms.gif'
 import Jt from '../../assets/jtpc.gif'
@@ -10,7 +11,7 @@ import Mb from '../../assets/bbq.jpg'
 import Ps from '../../assets/sideline.gif'
 import Pg from '../../assets/piano.gif'
 
-const items = [Sm, Jt, Ap, Fa, Mb, Ps, Pg]
+const items = [Ps1, Sm, Jt, Ap, Fa, Mb, Ps, Pg]
 
 function BigProjects() {
   return (
