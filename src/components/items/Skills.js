@@ -1,5 +1,19 @@
 import { Box, Heading, Button } from 'grommet'
 import { Code } from 'grommet-icons'
+/*
+<a href="https://www.flaticon.com/free-icons/node-js" title="node js icons">Node js icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/html5" title="html5 icons">Html5 icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/css-3" title="css 3 icons">Css 3 icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/react" title="react icons">React icons created by Vectors Market - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/bootstrap" title="bootstrap icons">Bootstrap icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/postgre" title="postgre icons">Postgre icons created by Freepik - Flaticon</a>
+
+
+
+
+
+*/
+
 
 function Skills () {
     return (

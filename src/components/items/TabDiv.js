@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Tab, Tabs, Text } from 'grommet'
+import { Box, Button, Tab, Tabs, Text } from 'grommet'
 import { Projects, Article, Robot, Domain } from 'grommet-icons'
 import BigProjects from './BigProjects'
 import BigBlogs from './BigBlogs'
@@ -11,9 +11,82 @@ function TabDiv() {
     const onActive = (nextIndex) => {
         setIndex(nextIndex)
     }
+    const FSCount = '12'
+    const [FSDisabled, setFSDisabled] = useState(false)
+    const [FSActive, setFSActive] = useState(false)
+    const FECount = '8'
+    const BECount = '5'
+
+    const typesort = 'all'
 
   return (
-    <div>
+    <Box
+        align='center'
+    >
+        <Box
+            width='xlarge'
+            direction='row'
+        >
+            <Box
+                direction='row'
+            >
+                <Box>
+                    <Button 
+                        active={FSActive}
+                        disabled={FSDisabled}
+                        label={'Full Stack (' + FSCount + ')'}
+                    />
+                    <Button label={'Front End (' + FECount + ')'}/>
+                    <Button label={'Back End(' + BECount + ')'}/>
+                </Box>
+                <Box 
+                    direction='column'
+                >
+                    <Button label='Business'/>
+                    <Button label='Productivity'/>
+                    <Button label='Entertainment'/>
+                </Box>
+                <Box
+                    direction='column'
+                >
+                    <Button label='MongoDB'/>
+                    <Button label='Sequelize'/>
+                    <Button label='Knex'/>
+                </Box>
+                <Box>
+                    <Box>
+                        CSS
+                        SASS
+                    </Box>
+                    <Box>
+                        Grommet
+                        Material UI
+                        Bootstrap
+                    </Box>
+                    <Box>
+                        Recoil
+                        Redux
+                    </Box>
+                    <Box>
+                        Form
+                        Auth
+                        JWT
+                        Cookies
+                        EmailJS
+                        ReactRouter
+                        ReactHookForm
+                        Yup
+                        Auth0
+                    </Box>
+                    
+                    <Box>
+                        JWT
+
+                    </Box>
+                </Box>
+            </Box>
+            <Box>Content</Box>
+        </Box>
         <Tabs activeIndex={index} onActive={onActive}>
             <Tab title={
                 <RichTab
@@ -50,7 +123,7 @@ function TabDiv() {
                     <Updates />
                 </Tab>
         </Tabs>
-    </div>
+    </Box>
   )
 }
 
